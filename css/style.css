@@ -1,0 +1,360 @@
+@charset 'utf-8';
+
+.inner {
+    width: 38rem;
+    width: 88.785%;
+    margin: 0 auto;
+    /* background: rgba(255, 255, 0, 0.1); */
+}
+
+#header {
+    /* background: #000; */
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#header nav {
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gnb {
+    display: none;
+}
+
+.logo a {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background: url(../img/logo-m.svg) no-repeat 50% / contain;
+}
+
+.util-menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.util-menu button {
+    width: 4rem;
+    height: 4rem;
+    background: no-repeat 50%;
+    border: 1px solid var(--white70p);
+    border-radius: 50%;
+}
+
+.util-menu button.btn-menu {
+    background-image: url(../img/ico-menu.svg);
+}
+
+.util-menu button.btn-contact {
+    background-image: url(../img/ico-contact.svg);
+}
+
+.visual {
+    height: 52rem;
+    background: skyblue;
+    position: relative;
+}
+
+.video-wrap {
+    height: 100%;
+}
+
+.video-wrap::after {
+    content: '';
+    position: absolute;
+    /* top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; */
+    inset: 0;
+    background: var(--gradient);
+    opacity: 0.8;
+}
+
+.visual-title {
+    position: absolute;
+    top: 14.9rem;
+    left: 50%;
+    transform: translateX(-50%); /* trftx */
+    /* border: 1px solid #000; */
+    width: 38rem;
+    width: 88.785%;
+}
+
+.visual-title h2 {
+    font-weight: 700;
+    font-size: 3.6rem;
+    color: #fff;
+    line-height: 44px;
+    line-height: 1.2; /* 44/36 */
+}
+
+.visual-title p {
+    font-weight: 500;
+    font-size: 2rem;
+    color: #fff;
+    line-height: 1.2; /* 24/20 줄간격은 font-size가 기준 */
+    margin-top: 2rem;
+}
+
+.btn-cta {
+    background: #fff;
+    color: var(--main-color);
+    /* m4.8r-a-0 */
+    margin: 4.8rem auto 0;
+}
+
+.introduce {
+    background: #f5f5f5;
+    padding: 4rem 0;
+}
+
+.introduce-list li {
+    display: flex;
+    gap: 4rem;
+    padding: 1.2rem 0;
+    min-height: 16.8rem;
+}
+
+.introduce-list li::before {
+    content: '';
+    display: block;
+    width: 9rem;
+    height: 9rem;
+    background: no-repeat 50% / cover;
+}
+
+.introduce-list li:nth-child(1)::before {
+    background-image: url(../img/intro-ico1.png);
+}
+.introduce-list li:nth-child(2)::before {
+    background-image: url(../img/intro-ico2.png);
+}
+.introduce-list li:nth-child(3)::before {
+    background-image: url(../img/intro-ico3.png);
+}
+.introduce-list li:nth-child(4)::before {
+    background-image: url(../img/intro-ico4.png);
+}
+
+.introduce-list li dl {
+    width: 24.9rem;
+    width: 65.5263%;
+}
+
+.introduce-list li dl dt {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.2;
+}
+
+.introduce-list li dl dd {
+    margin-top: 0.8rem;
+    line-height: 1.5;
+}
+
+.introduce .btn-black {
+    margin: 0 auto;
+}
+
+.competitive {
+    padding: 6rem 0;
+    background: url(../img/dron-pic3.jpg) no-repeat 100% 100% / 70% auto; /* 들어가는 공간 기준 오른쪽 끝, y축 기준 끝 */
+}
+
+.competitive h2 + p {
+    margin-top: 2rem;
+}
+
+.competitive-list-wrap {
+    /* border: 1px solid #f00; */
+    overflow-x: scroll; /* ovxs */ /* x축으로만 스크롤 생기게 함 */
+    margin-top: 4.1rem;
+}
+
+.competitive-list {
+    display: flex;
+    gap: 1.1rem;
+
+    /* 1.카운터 세팅 */
+    counter-reset: competitive;
+}
+
+.competitive-list li {
+    border: 1px solid #fff;
+    background: var(--white80p);
+    border-radius: 1rem;
+    backdrop-filter: blur(5px);
+    width: 38rem;
+    height: 12.5rem;
+    flex-shrink: 0; /* 쪼그라들지 마 */
+    padding: 1rem;
+
+    display: flex;
+    gap: 2.4rem;
+
+    /* 2.카운터 증가 */
+    counter-increment: competitive;
+}
+
+.competitive-list li::before {
+    /* 3.카운터 적용 */
+    content: counter(competitive);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: 1px solid var(--black50p);
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.competitive-list li p {
+    font-size: 1.4rem;
+    color: #a7acbc;
+
+    /* 4줄 제한 */
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-list li {
+    /* border: 10px solid #f00; */
+    position: relative;
+    padding-bottom: 25rem;
+    background: #fff;
+}
+
+.product-list li figure {
+    /* aspect-ratio: 1/1.215; */
+    height: 52rem;
+}
+
+.product-list li .product-con {
+    width: 38rem;
+    min-height: 45rem;
+    background: #f5f5f5;
+
+    position: absolute;
+    bottom: 2.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 6rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-list li .product-con h3 {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.product-list li .product-con p {
+    margin-top: 2.4rem;
+}
+
+.product-list li .product-con .btn-black {
+    margin-top: 2.4rem;
+}
+
+.newsletter {
+    /* aspect-ratio: 1/1.028; */
+    height: 44rem;
+
+    background: url(../img/newsletter-bg.jpg) no-repeat 50% / cover fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-con {
+    width: 38rem;
+}
+
+.newsletter-con h4 {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.newsletter-con .form-wrap {
+    background: #5f5;
+    margin-top: 4.8rem;
+    height: 4.8rem;
+    border: 1px solid #fff;
+    border-radius: 6rem;
+    background: var(--white20p);
+
+    display: flex;
+    overflow: hidden;
+}
+
+.newsletter-con .form-wrap input {
+    background: transparent;
+    width: calc(100% - 8.4rem);
+    color: #fff;
+    padding: 1rem 2.8rem;
+}
+
+.newsletter-con .form-wrap input::placeholder {
+    color: #fff;
+}
+
+.newsletter-con .form-wrap button {
+    width: 8.4rem;
+    background: #fff;
+    color: var(--main-color);
+    border-radius: 6rem;
+}
+
+#footer {
+    background: #2c2e33;
+    padding: 8rem 0;
+}
+
+#footer .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.8rem;
+}
+
+#footer .foot-logo {
+    display: block;
+    width: 24.6rem;
+    height: 3.6rem;
+    background: url(../img/foot-logo.png) no-repeat 50% / contain;
+    border: 1px solid #f00;
+}
+
+#footer p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--white60p);
+    text-align: center;
+    border: 1px solid #ff0;
+}
+
+#footer p em {
+    display: block;
+    margin-top: 0.5rem;
+}
